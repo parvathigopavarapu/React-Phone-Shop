@@ -13,7 +13,7 @@ class ClearCart extends React.Component {
                                 <div className='row'>
                                     <button className='btn btn-danger mr-5'
                                         onClick={() => { value.clearCart() }}>
-                                       <Link to='/Home'>CLEAR CART</Link> </button></div>
+                                       <Link to='/'>CLEAR CART</Link> </button></div>
 
                                 <div className='row'>  
                                  <label className='float-right'>SUBTOTAL :

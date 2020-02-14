@@ -31,7 +31,7 @@ class Detail extends React.Component {
                                 </div>
                             </div>
 
-                            <button className="btn btn-primary"><Link to='/Home' >Back To Products</Link></button>
+                            <button className="btn btn-primary"><Link to='/' >Back To Products</Link></button>
 
                             <button disabled={inCart ? true : false} className="btn btn-warning"
                                 onClick={() => { value.addToCart(id) ;value.openModel(id)}}>

@@ -20,7 +20,7 @@ class CartModal extends React.Component {
                                     <h3>{title}</h3>
                                     <h6>Price: &#x20b9;{price}</h6>
                                 
-                            <Link to='/Home'>   <button className='btn btn-danger mb-5'
+                            <Link to='/'>   <button className='btn btn-danger mb-5'
                              onClick={()=> closeModel()}>Continue Shopping</button></Link> 
                             <Link to='/Cart'>  <button className='btn btn-warning mb-5 ml-2'
                              onClick={()=> closeModel()}>Goto cart</button></Link>
