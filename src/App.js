@@ -2,19 +2,33 @@ import React from 'react';
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import NavLinks from './NavLinks';
-import { BrowserRouter as Router,Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import ProductList from './ProductList';
-import Product from './Product';
+import Detail from './Detail';
+import About from './About';
+import Contactus from './Contactus';
+import Orders from './Orders';
+import Cart from './Cart';
+import CartModel from './Model';
+import Default from './Default';
+
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Router>
+
         <NavLinks />
-          <Route path='/' exact strict component={ProductList}/>
-           <Route path='/productDetails:id' exact strict component={Product}/>
-       </Router>
+
+        <Route path='/Home' exact strict component={ProductList} />
+        <Route path='/Cart' exact strict component={Cart} />
+        <Route path='/Orders' exact strict component={Orders} />
+        <Route path='/About' exact strict component={About} />
+        <Route path='/Contactus' exact strict component={Contactus} />
+        <Route path='/ProductDetails/:id' exact strict component={Detail} />
+        <Route component={Default}/>
+        <CartModel/>
+   
       </div>
     );
   }

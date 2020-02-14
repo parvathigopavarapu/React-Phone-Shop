@@ -4,16 +4,86 @@
 .h6{
   text-decoration: wavy;
 }
-footer{
-  padding-top: 10px;
-  position:fixed;
-left:0;
-bottom:0;
-right:0;
-background-color: black;
-color: white;
-padding-bottom:50px;
-top: calc(100% - 50px)!important;
-margin-top:10px!important
-
+a {
+ 
+  background-color: transparent;
+  text-decoration:none;
+  color:pink!important;
+  font-size:17px!important;
+  font-weight: bold;
+}
+input{
+  width:100%;
+  height:45px;
+  margin-bottom:6px!important;
+  font-size:17px!important;
+  border-radius: 5px;
+  border:1px solid rgb(197, 193, 193);
+  padding-left:3px;
+}
+.modal-header {
+  display: flex;
+  color:red!important;
+  align-items: center!important;
+  
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px);
+  text-align: center!important;
+}
+input.checkbox{
+ 
+  margin:0px!important ;
+}
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  margin-right: 5px;
+  width:20px!important;
+  height:20px!important;
+  overflow:show;
+}
+.active{
+  display: block;
+}
+.inactive{
+  display: none;
+}
+.bg-secondary1 {
+  background-color: #f0d4ca!important;
+  
+}
+.pad{
+  align-items: center!important;
+  
+  margin-top:160px;
+}
+.cart{
+  /* width:40%!important; */
+  margin-left: 25%;
+  bottom: 10px!important;
+  background-color: rgb(130, 173, 238);
+  color: white;
+  border:none;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  text-align: center;
+  padding:5 5 0 0;
+  
+}
+body{
+  /* overflow-x: hidden; */
+}
+.img-fluid{
+  width:15%!important;
+}
+.countInput{
+  width:25px;
+  height:30px;
+  border-radius: 0;
+  margin-left:3px;
+  margin-right:3px;
+  padding:0;
+  text-align:center;
 }
