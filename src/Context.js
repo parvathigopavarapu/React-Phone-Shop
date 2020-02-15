@@ -101,7 +101,12 @@ class ProductProvider extends React.Component {
 
     }
     clearCart =() =>{
-        this.setState({cart:[]})
+        // this.setState({cart:[]})
+        this.setState(()=>{
+            return {cart:[]};
+        },()=>{
+            this.setProducts();
+        })
     }
     subTotal = () =>{
         let subTotal=0;

@@ -1,34 +1,40 @@
 import React from 'react'
 import { ProductConsumer } from './Context';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import PaypalPayment from './PaypalPayment'
 class ClearCart extends React.Component {
     render() {
         return (<React.Fragment>
 
             <ProductConsumer>
                 {(value) => {
+                    const {cartSubTotal,CartTax,CartTotal,clearCart} = value
                     if (value.cart.length) {
                         return (
                             <div className=' float-right '>
                                 <div className='row'>
                                     <button className='btn btn-danger mr-5'
-                                        onClick={() => { value.clearCart() }}>
+                                        onClick={() => { clearCart() }}>
                                        <Link to='/'>CLEAR CART</Link> </button></div>
 
                                 <div className='row'>  
                                  <label className='float-right'>SUBTOTAL :
-                        </label> <label>{value.cartSubTotal}</label></div>
+                        </label> <label>{cartSubTotal}</label></div>
 
                                 <div className='row'>  
                                   <label className='float-right'>TAX : </label>
-                        <label>{value.CartTax}</label></div>
+                        <label>{CartTax}</label></div>
 
                                 <div className='row'>
                                     <label className='float-right'>TOTAL : </label>
-                        <label>{value.CartTotal}</label></div>
-                                <div className='row'>
+                        <label>{CartTotal} </label></div>
+                                {/* <div className='row'>
                                     <button className='btn btn-warning mr-5'>
-                                        PAYPAL CHECKOUT</button></div>
+                                        PAYPAL CHECKOUT</button></div> */}
+                                        <PaypalPayment total={CartTotal}
+                                        clearCart = {clearCart}
+                                        
+                                        ></PaypalPayment>
                             </div>
                         );
                     }

@@ -11,7 +11,7 @@ class Product extends React.Component {
     render() {
         const { id, img, title, price, inCart, info, company } = this.props.product
         return (<React.Fragment >
-            <div className=' col-6 mx-auto col-md-6 col-lg-3 my-2'>
+            <div className=' mx-auto col-md-6 col-lg-3 col-sm-12 my-2'>
                 <div className='card'>
                     <ProductConsumer>
                         {value => (

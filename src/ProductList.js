@@ -12,14 +12,11 @@ class ProductList extends React.Component {
     render() {
         return <React.Fragment>
              <Carousel />
-            <div className='row ml-5  mr-5'>
+            <div className='row ml-3  mr-3'>
                 <ProductConsumer>
                     {(value) => (
                         value.productList.map(product => (
-                            <Product key={product.id} product={product}>
-                               
-
-                            </Product>
+                            <Product key={product.id} product={product}></Product>
                         )))
 
                     }

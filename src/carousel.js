@@ -27,14 +27,15 @@ class Carousel extends React.Component {
   }
   render() {
     return (
-      <div className="row  p-3 bg-secondary1 text-black">
+      <div className="row bg-secondary1 text-black">
         <div className='col-1'>
 
           <FontAwesomeIcon icon={faArrowCircleLeft} className='fa-3x pad'
-            onClick={this.gotoPreviousSlide} /></div>
-           <div className='col-10'>
-             <ProductConsumer>
-               {(value) => (value.productList.map((product, index) => (
+            onClick={this.gotoPreviousSlide} />
+        </div>
+        <div className='col-8'>
+          <ProductConsumer>
+            {(value) => (value.productList.map((product, index) => (
               <div className={
                 index === this.state.activeIndex ? 'active row' : 'inactive'}
                 key={product.title}>

@@ -23,8 +23,8 @@ class Cart extends React.Component {
                     {(value) => (value.cart.length ? value.cart.map(product => {
                         const { img, title, price, total,count,id } = product;
                         return (
-                            <tbody>
-                                <tr key={product.id}>
+                            <tbody key={product.id}>
+                                <tr >
                                     <td><img src={img} alt='product' className="img-fluid" /></td>
                                     <td>{title}</td>
                                     <td>{price}</td>

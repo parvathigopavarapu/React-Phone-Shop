@@ -53,11 +53,12 @@ input[type=checkbox], input[type=radio] {
 .bg-secondary1 {
   background-color: #f0d4ca!important;
   
+  
 }
 .pad{
   align-items: center!important;
   
-  margin-top:160px;
+  margin-top:150%;
 }
 .cart{
   /* width:40%!important; */
